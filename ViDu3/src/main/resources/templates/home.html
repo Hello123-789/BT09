@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <title>Trang Chủ - IOTSTAR SHOP</title>
+</head>
+<body>
+<main layout:fragment="content">
+    <div class="bg-white p-5 rounded-3 shadow-sm mb-4">
+        <h1 class="display-5 fw-bold text-primary mb-3">Chào Mừng Đến Với IOTSTAR SHOP</h1>
+        <p class="col-md-10 fs-5 text-muted">
+            Hệ thống quản lý người dùng và sản phẩm tích hợp Spring Security 7, xác thực OTP qua Email và Upload ảnh Cloudinary.
+        </p>
+        <hr class="my-4">
+        <div class="d-flex gap-3">
+            <a th:href="@{/products}" class="btn btn-primary btn-lg"><i class="bi bi-box-seam me-2"></i>Xem Sản Phẩm</a>
+            <a sec:authorize="hasAuthority('ROLE_ADMIN')" th:href="@{/users}" class="btn btn-outline-secondary btn-lg"><i class="bi bi-people me-2"></i>Quản Lý Người Dùng</a>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-6">
+            <div class="card h-100 border-start border-primary border-4 shadow-sm">
+                <div class="card-body d-flex align-items-center">
+                    <div class="rounded-circle bg-primary bg-opacity-10 p-3 me-3 text-primary fs-2">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div>
+                        <h6 class="card-subtitle text-muted mb-1">Tổng Số Người Dùng</h6>
+                        <h2 class="card-title mb-0 fw-bold" th:text="${userCount}">0</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 border-start border-success border-4 shadow-sm">
+                <div class="card-body d-flex align-items-center">
+                    <div class="rounded-circle bg-success bg-opacity-10 p-3 me-3 text-success fs-2">
+                        <i class="bi bi-bag-check-fill"></i>
+                    </div>
+                    <div>
+                        <h6 class="card-subtitle text-muted mb-1">Tổng Số Sản Phẩm</h6>
+                        <h2 class="card-title mb-0 fw-bold" th:text="${productCount}">0</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

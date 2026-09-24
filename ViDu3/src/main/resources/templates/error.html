@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <title>Lỗi Hệ Thống</title>
+</head>
+<body>
+<main layout:fragment="content">
+    <div class="row justify-content-center py-5">
+        <div class="col-md-6 text-center">
+            <div class="card shadow-sm p-4">
+                <div class="card-body">
+                    <i class="bi bi-exclamation-triangle text-danger display-1 mb-3"></i>
+                    <h2 class="card-title text-danger mb-3">Đã Xảy Ra Lỗi!</h2>
+                    <p class="card-text text-muted fs-5" th:text="${message}">Có lỗi phát sinh trong quá trình xử lý yêu cầu.</p>
+                    <a th:href="@{/}" class="btn btn-primary mt-3"><i class="bi bi-house-door me-1"></i>Về Trang Chủ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
