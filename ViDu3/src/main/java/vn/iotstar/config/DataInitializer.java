@@ -72,12 +72,12 @@ public class DataInitializer implements CommandLineRunner {
             return categoryRepository.save(new Category("Phụ Kiện Cầu Lông", "phu_kien.jpg"));
         });
 
-        createProductIfNotFound("Yonex Astrox 100 ZZ", "Yonex", "4500000", 10, "/uploads/astrox100zz.jpg", "Vợt cầu lông cao cấp Yonex Astrox 100 ZZ.", cVot, user);
-        createProductIfNotFound("Yonex Astrox 88D Pro", "Yonex", "4200000", 12, "/uploads/astrox88dpro.jpg", "Vợt cầu lông Yonex Astrox 88D Pro.", cVot, user);
-        createProductIfNotFound("Yonex Astrox 88S Pro", "Yonex", "4100000", 10, "/uploads/astrox88spro.jpg", "Vợt cầu lông Yonex Astrox 88S Pro.", cVot, user);
-        createProductIfNotFound("Yonex Nanoflare 1000 Z", "Yonex", "4600000", 8, "/uploads/nanoflare1000z.jpg", "Vợt cầu lông tốc độ cao Yonex Nanoflare 1000 Z.", cVot, user);
-        createProductIfNotFound("Yonex Power Cushion 65 Z3", "Yonex", "3200000", 10, "/uploads/65z3.jpg", "Giày cầu lông Yonex Power Cushion 65 Z3.", cGiay, user);
-        createProductIfNotFound("Yonex AC102EX Power Cushion Grip", "Yonex", "80000", 50, "/uploads/ac102ex.jpg", "Quấn cán vợt Yonex AC102EX.", cPhuKien, user);
+        createProductIfNotFound("Yonex Astrox 100 ZZ", "Yonex", "4500000", 10, "/uploads/products/astrox100zz.jpg", "Vợt cầu lông cao cấp Yonex Astrox 100 ZZ.", cVot, user);
+        createProductIfNotFound("Yonex Astrox 88D Pro", "Yonex", "4200000", 12, "/uploads/products/astrox88dpro.jpg", "Vợt cầu lông Yonex Astrox 88D Pro.", cVot, user);
+        createProductIfNotFound("Yonex Astrox 88S Pro", "Yonex", "4100000", 10, "/uploads/products/astrox88spro.jpg", "Vợt cầu lông Yonex Astrox 88S Pro.", cVot, user);
+        createProductIfNotFound("Yonex Nanoflare 1000 Z", "Yonex", "4600000", 8, "/uploads/products/nanoflare1000z.jpg", "Vợt cầu lông tốc độ cao Yonex Nanoflare 1000 Z.", cVot, user);
+        createProductIfNotFound("Yonex Power Cushion 65 Z3", "Yonex", "3200000", 10, "/uploads/products/65z3.jpg", "Giày cầu lông Yonex Power Cushion 65 Z3.", cGiay, user);
+        createProductIfNotFound("Yonex AC102EX Power Cushion Grip", "Yonex", "80000", 50, "/uploads/products/ac102ex.jpg", "Quấn cán vợt Yonex AC102EX.", cPhuKien, user);
     }
 
     private void createProductIfNotFound(String name, String brand, String price, Integer quantity,

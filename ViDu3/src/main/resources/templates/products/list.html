@@ -52,7 +52,7 @@
                 <tr th:each="p : ${products.content}">
                     <td th:text="${p.id}">1</td>
                     <td>
-                        <img th:if="${p.imageUrl != null}" th:src="@{${p.imageUrl}}" alt="Product" style="width: 50px; height: 50px; object-fit: cover;" class="rounded border">
+                        <img th:if="${p.imageUrl != null}" th:src="${#strings.contains(p.imageUrl, '|') ? #strings.substringBefore(p.imageUrl, '|') : p.imageUrl}" alt="Product" style="width: 50px; height: 50px; object-fit: cover;" class="rounded border">
                         <span th:if="${p.imageUrl == null}" class="text-muted small">Chưa có ảnh</span>
                     </td>
                     <td class="fw-bold" th:text="${p.name}">Tên sản phẩm</td>
